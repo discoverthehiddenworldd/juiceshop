@@ -99,6 +99,7 @@ mat-card {
 .ribbon-top-left {
   left: -10px;
   top: -10px;
+  z-index: 1;
 }
 
 .ribbon-top-left::before {
