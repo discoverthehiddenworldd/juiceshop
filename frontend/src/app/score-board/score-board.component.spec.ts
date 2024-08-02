@@ -58,7 +58,13 @@ describe('ScoreBoardPreviewComponent', () => {
       'getApplicationConfiguration'
     ])
     await TestBed.configureTestingModule({
-      declarations: [
+      imports: [
+        TranslateModule.forRoot(),
+        HttpClientTestingModule,
+        RouterTestingModule,
+        MatProgressSpinnerModule,
+        MatDialogModule,
+        MatIconModule,
         ScoreBoardComponent,
         HackingChallengeProgressScoreCardComponent,
         CodingChallengeProgressScoreCardComponent,
@@ -67,14 +73,6 @@ describe('ScoreBoardPreviewComponent', () => {
         ChallengesUnavailableWarningComponent,
         TutorialModeWarningComponent,
         ScoreCardComponent
-      ],
-      imports: [
-        TranslateModule.forRoot(),
-        HttpClientTestingModule,
-        RouterTestingModule,
-        MatProgressSpinnerModule,
-        MatDialogModule,
-        MatIconModule
       ],
       providers: [
         { provide: ChallengeService, useValue: challengeService },

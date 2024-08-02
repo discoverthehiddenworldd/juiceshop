@@ -19,12 +19,12 @@ describe('LastLoginIpComponent', () => {
     sanitizer.sanitize.and.returnValue({})
 
     TestBed.configureTestingModule({
-      declarations: [LastLoginIpComponent],
       providers: [
         { provide: DomSanitizer, useValue: sanitizer }
       ],
       imports: [
-        MatCardModule
+        MatCardModule,
+        LastLoginIpComponent
       ]
     }).compileComponents()
   }))

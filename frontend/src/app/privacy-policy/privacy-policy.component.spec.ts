@@ -22,11 +22,11 @@ describe('PrivacyPolicyComponent', () => {
     configurationService.getApplicationConfiguration.and.returnValue(of({}))
 
     TestBed.configureTestingModule({
-      declarations: [PrivacyPolicyComponent],
       imports: [
         HttpClientTestingModule,
         MatCardModule,
-        MatDividerModule
+        MatDividerModule,
+        PrivacyPolicyComponent
       ],
       providers: [
         { provide: ConfigurationService, useValue: configurationService }

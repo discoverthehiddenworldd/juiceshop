@@ -1,5 +1,5 @@
 import { type ComponentFixture, TestBed } from '@angular/core/testing'
-import { CookieModule, CookieService } from 'ngx-cookie'
+import { CookieModule, CookieService } from 'ngy-cookie'
 
 import { CodeFixesComponent } from './code-fixes.component'
 
@@ -10,8 +10,7 @@ describe('CodeFixesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CookieModule.forRoot()],
-      declarations: [CodeFixesComponent],
+      imports: [CookieModule.forRoot(), CodeFixesComponent],
       providers: [CookieService]
     })
       .compileComponents()

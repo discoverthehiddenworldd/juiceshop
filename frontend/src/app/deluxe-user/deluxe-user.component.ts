@@ -6,14 +6,22 @@
 import { Component, NgZone, type OnInit } from '@angular/core'
 import { UserService } from '../Services/user.service'
 import { ActivatedRoute, Router } from '@angular/router'
-import { CookieService } from 'ngx-cookie'
+import { CookieService } from 'ngy-cookie'
 import { ConfigurationService } from '../Services/configuration.service'
 import { SocketIoService } from '../Services/socket-io.service'
+import { MatIcon } from '@angular/material/icon'
+import { MatButton } from '@angular/material/button'
+import { TranslateModule } from '@ngx-translate/core'
+import { MatCard } from '@angular/material/card'
+import { NgIf } from '@angular/common'
+import { FlexModule } from '@angular/flex-layout/flex'
 
 @Component({
   selector: 'app-deluxe-user',
   templateUrl: './deluxe-user.component.html',
-  styleUrls: ['./deluxe-user.component.scss']
+  styleUrls: ['./deluxe-user.component.scss'],
+  standalone: true,
+  imports: [FlexModule, NgIf, MatCard, TranslateModule, MatButton, MatIcon]
 })
 
 export class DeluxeUserComponent implements OnInit {
